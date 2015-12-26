@@ -19,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
        getInverser = getInverse)
 }
 
-## Write a short comment describing this function
+# cacheSolve calculates the inverse matrix
 
 cacheSolve <- function(x, ...) {
   inv <- x$getInverse()
@@ -32,3 +32,9 @@ cacheSolve <- function(x, ...) {
   x$setInverse(inv)
   inv
 }
+
+# test by the following code (use any matrix x) 
+# a <- makeCacheMatrix(x) 
+# b <- cacheSolve(a)
+# a %*% b will return an identity matrix
+# Voila!
